@@ -462,7 +462,6 @@ class Makefile:
                         py_lib = bpy_lib
 
                 if self._debug:
-                    py_lib = py_lib + "_d"
 
                     if self.generator != "MINGW":
                         cflags.append("/D_DEBUG")
@@ -1513,9 +1512,6 @@ class ModuleMakefile(Makefile):
 
         if sys.platform != "win32" and static:
             self._target = "lib" + self._target
-
-        if sys.platform == "win32" and debug:
-            self._target = self._target + "_d"
 
     def finalise(self):
         """Finalise the macros common to all module Makefiles.
