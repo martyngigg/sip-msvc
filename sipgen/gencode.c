@@ -961,7 +961,7 @@ static void generateCompositeCpp(sipSpec *pt, const char *codeDir,
 
     prcode(fp,
 "\n"
-"#include <Python.h>\n"
+"#include <wrappython.h>\n"
 "\n"
 "\n"
 "static void sip_import_component_module(PyObject *d, const char *name)\n"
@@ -1064,7 +1064,7 @@ static void generateConsolidatedCpp(sipSpec *pt, const char *codeDir,
 
     prcode(fp,
 "\n"
-"#include <Python.h>\n"
+"#include <wrappython.h>\n"
 "#include <string.h>\n"
 "#include <sip.h>\n"
         );
@@ -1236,7 +1236,7 @@ static void generateComponentCpp(sipSpec *pt, const char *codeDir,
 
     prcode(fp,
 "\n"
-"#include <Python.h>\n"
+"#include <wrappython.h>\n"
         );
 
     generateModInitStart(pt->module, TRUE, fp);
